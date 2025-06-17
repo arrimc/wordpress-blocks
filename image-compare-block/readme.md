@@ -48,4 +48,4 @@ Ideal for photographers, designers, e-commerce sites, or anyone needing visual A
 
 ### Additional Notes  
 - For support or contributions, visit the [GitHub repository](https://github.com/arrimc).  
-- Compatible with WordPress 5.0+ and full site editing (FSE).  
+- Compatible with WordPress 6.0+ and full site editing (FSE).  
