@@ -1,0 +1,104 @@
+.image-compare-block {
+  padding: 20px;
+  border: 1px dashed #ddd;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  pointer-events: auto;
+  position: relative;
+  overflow: hidden;
+
+  .image-compare__upload-container {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    width: fit-content;
+  }
+
+  .image-compare__preview {
+    position: relative;
+    width: 100%;
+    height: calc(100% - 60px);
+    min-height: 300px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    overflow: hidden;
+
+    .image-compare__before {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .image-compare__after-wrapper {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 2;
+    }
+
+    .image-compare__after {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+
+  .image-compare__slider {
+    position: absolute;
+    background-color: white;
+    z-index: 10;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);
+
+    &.horizontal {
+      width: 4px;
+      height: 100%;
+      cursor: col-resize;
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        background: white;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        right: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);
+      }
+    }
+
+    &.vertical {
+      width: 100%;
+      height: 4px;
+      cursor: row-resize;
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        background: white;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        right: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+}
